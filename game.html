@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="game.css">
+	<script src="game.js"></script>
+	<script>
+		window.onload=function(){
+			var play=document.getElementById("play");
+			var flag=true;
+			play.onclick=function(){
+					var games=new game();
+					 games.play();
+					var select=document.getElementsByTagName("select")[0];
+					select.onchange=function(){
+						games.speed+=parseInt((select[select.selectedIndex].value));
+						games.letterLen+=parseInt((select[select.selectedIndex].value));
+						games.aa=(select[select.selectedIndex].value);
+						 games.play();
+					}
+			}
+			var again=document.getElementById("again");
+			var exit=document.getElementById("exit");
+			again.onclick=function(){
+				location.reload();
+			}
+			exit.onclick=function(){
+				location.reload();
+			}
+		}
+	</script>
+</head>
+<body>
+<div class="panel">
+	<div class="stop">
+		<input type="button" value="play" id="play">
+	</div>
+	<div class="die">
+		<span class="font-s">生命:</span><span class="num">12</span>
+	</div>
+	<div class="sore">
+		<span class="font-s">分数:</span><span class="num">0</span>
+	</div>
+	<select>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>6</option>
+	</select>
+</div>
+<div class="gameover">
+	<span>游戏结束<br>Game Over</span>
+	<div class="aa" id="again">Again</div>
+	<div class="aa" id="exit">EXIT</div>
+</div>
+
+
+</body>
+</html>

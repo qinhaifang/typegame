@@ -1,0 +1,104 @@
+html,body{
+	width: 100%;height: 100%;
+	overflow: hidden;
+	background: url(images/bg.jpg) no-repeat;
+}
+.panel{
+	width:800px;height:auto;
+	position: fixed;
+	bottom: 10px;left:10px;
+	float: left;
+}
+.panel .die,.panel .sore,.panel .stop{
+	width: 160px;height:100px;
+	color: #fff;
+	/*border: 1px solid #fff;*/
+	position: relative;
+	margin-right: 50px;
+	float: left;
+}
+.die{
+	background: url("images/yu1.png") no-repeat;
+	background-size: contain;
+}
+.sore{
+	   background: url("images/yu1.png") no-repeat;
+	   background-size: contain;
+   }
+.stop{
+	background: url("images/yu3.png") no-repeat;
+	background-size: contain;
+}
+.stop input{
+	width: 120px;
+	height:40px;line-height: 40px;
+	color: red;
+	font-size: 30px;
+	font-family:方正胖头鱼简体;
+	position: absolute;
+	top:-25px;
+	background: rgba(0,0,0,0.3);
+	-webkit-transition: all 1s ease;
+	animation:input 1s linear infinite alternate ;
+}
+@keyframes input {
+	0% {
+		transform: scale(1, 1);
+	}
+	100% {
+		transform: scale(0.7, 0.7);
+	}
+}
+.die .font-s,.sore .font-s{
+	font-size: 25px;color: red;
+	font-weight: 700;
+}
+.die .num,.sore .num{
+	width: 50px;height: 50px;
+	position: absolute;
+	right:-20px;top:-35px;
+	font-size: 30px;line-height: 50px;text-align: center;color: red;
+	border:3px solid aqua;font-weight: 700;
+	border-radius: 50%;
+}
+
+select{
+	font-size: 30px;color: blue;
+	width: 160px;height: 100px;
+	background: url("images/猴子.png")no-repeat center;
+	background-size: contain;
+	/*border:1px solid #fff;*/
+	float:right;
+}
+option{
+	color: blue;
+	font-size: 20px;
+}
+.gameover{
+	width: 400px;height: 200px;
+	/*border:1px solid red;*/
+	border:3px solid aqua;
+	position: fixed;
+	left:0;right:0;bottom:0;top:0;
+	margin: auto;
+	text-align: center;
+	line-height: 60px;
+	font-size: 50px;
+	font-family: 华康娃娃字体;
+	color: red;font-weight: 700;
+	-webkit-transition: all 1s ease;
+	display: none;
+}
+.gameover span{
+	float: left;
+}
+.gameover:hover{
+	transform: rotateZ(360deg);
+}
+.aa{
+	width: 150px;height: 50px;
+	border:1px solid #ccc;
+	float: right;
+	font-size: 20px;
+    margin: 10px;
+}
